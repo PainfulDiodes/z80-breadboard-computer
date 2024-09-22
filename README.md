@@ -246,7 +246,7 @@ Having got to grips with the expected assembly format I managed to assemble some
 
     sjasmplus --raw=bin --lst=lst test.asm
 
-Where bin is the output binary file, and lst is a useful listing output. I have bene using sjasmplus to assemble Marvin.
+Where bin is the output binary file, and lst is a useful listing output. I have been using sjasmplus to assemble Marvin.
 
 * https://github.com/z00m128/sjasmplus
 * https://github.com/z00m128/sjasmplus/blob/master/INSTALL.md
@@ -345,7 +345,7 @@ Sending a batch instruction file; no data dropped and the Z80 keeps up:
 
 With the design as it stands, it is necessary to manually reset the Z80 after powering up in order to see the welcome message. I think what is happening is there is a delay in the USB device becoming ready, which happens after the Z80 has already sent the welcome message and prompt. The "ready" signal is active-low, so it may appear to be ready while powering up? This requires further testing / analysis.
 
-More background to all of the above can be found in the earlier experiments [here](https://painfuldiodes.wordpress.com/?p=530&preview=true). 
+More background to all of the above can be found in the earlier experiments [here](https://painfuldiodes.wordpress.com). 
 
 * https://freeware.the-meiers.org/ CoolTerm
 * https://painfuldiodes.wordpress.com
