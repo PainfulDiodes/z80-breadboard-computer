@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ECS-2200x-xxx")(type "KiCad")(uri "${KIPRJMOD}/ECS-2200x-xxx.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "z80_breadboard_hld")(type "KiCad")(uri "${KIPRJMOD}/z80_breadboard_hld.kicad_sym")(options "")(descr ""))
+)

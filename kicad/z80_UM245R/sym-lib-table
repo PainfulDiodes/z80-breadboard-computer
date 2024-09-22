@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "UM245R")(type "KiCad")(uri "${KIPRJMOD}/UM245R.kicad_sym")(options "")(descr ""))
+)
