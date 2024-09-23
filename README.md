@@ -345,7 +345,7 @@ Sending a batch instruction file; no data dropped and the Z80 keeps up:
 
 With the design as it stands, it is necessary to manually reset the Z80 after powering up in order to see the welcome message. I think what is happening is there is a delay in the USB device becoming ready, which happens after the Z80 has already sent the welcome message and prompt. The "ready" signal is active-low, so it may appear to be ready while powering up? This requires further testing / analysis.
 
-More background to all of the above can be found in the earlier experiments [here](https://painfuldiodes.wordpress.com). 
+More background to all of the above can be found in the earlier experiments [here](https://painfuldiodes.wordpress.com/category/z80-experiments/).
 
 * https://freeware.the-meiers.org/ CoolTerm
-* https://painfuldiodes.wordpress.com
+* https://painfuldiodes.wordpress.com/category/z80-experiments/
