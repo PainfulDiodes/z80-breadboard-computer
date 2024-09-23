@@ -8,7 +8,7 @@ In [April 2024 Zilog announced](https://www.theregister.com/2024/04/22/z80_cpu_e
 
 ## High level design
 
-![](kicad/z80_breadboard_hld/z80_breadboard_hld.svg)
+![](kicad/z80_breadboard_hld/z80_breadboard_hld.jpg)
 
 Whilst there were many homebrew / breadboard Z80 designs online, I wanted to design the circuit myself rather than copying existing designs. Of course I learned from other projects, but then again I also made some bad choices based on naive interpretation of examples that had been simplified for educational purposes.
 
@@ -50,7 +50,7 @@ Finally, and likely stating the obvious... all of the ICs were ordered in DIP fo
 
 ## CPU, clock and reset
 
-![](kicad/z80_clock_reset/z80_clock_reset.svg)
+![](kicad/z80_clock_reset/z80_clock_reset.jpg)
 
 The Z80 CPU requires a 5v power supply and a ground connection, a clock input, and it provides 16 address outputs, 8 data inputs/outputs, and has a number of inputs and outputs for CPU and system control purposes.
 
@@ -85,7 +85,7 @@ The [Z80 Family CPU User Manual](http://www.zilog.com/docs/z80/z80cpu_um.pdf) ha
 
 ## Memory
 
-![](kicad/z80_memory/z80_memory.svg)
+![](kicad/z80_memory/z80_memory.jpg)
 
 In the 1980s, static RAM was very expensive and often cheaper dynamic RAM would be used. Dynamic RAM needs to be regularly "refreshed" to retain data, adding to the complexity of the design, although the Z80 does provide specific support for DRAM refresh.
 
@@ -106,7 +106,7 @@ However, the devices will only observe /RD or /WR  when their respective /CE (ch
 
 ## USB
 
-![](kicad/z80_UM245R/z80_UM245R.svg)
+![](kicad/z80_UM245R/z80_UM245R.jpg)
 
 Initially I intended to use a 1980's-consistent UART in my design to connect it to a modern computer, but modern computers are equipped with USB interfaces rather than simpler RS232 serial interfaces. The obvious bridge here was to use an [FTDI USB to TTL cable](https://ftdichip.com/products/ttl-232r-5v-we/). 
 
@@ -153,7 +153,7 @@ Now, after the Z80 is reset it will start to look for instructions from address 
 
 Naturally the A15 line being the most significant address bit defines upper and lower half of the address space: high for upper half, and low for lower half.
 
-![](kicad/z80_glue_logic/z80_glue_logic.svg)
+![](kicad/z80_glue_logic/z80_glue_logic.jpg)
 
 Remembering these control signals are active when low, the memory select logic therefore needs to implement the following two rules:
 
@@ -213,7 +213,7 @@ Note that I have skipped rows where both /RD and /WR are active as these are mut
 
 ## Complete Schematic
 
-![](/kicad/z80_breadboard/z80_breadboard.svg)
+![](/kicad/z80_breadboard/z80_breadboard.jpg)
 
 ## Marvin the monitor
 
