@@ -10,8 +10,6 @@ In [April 2024 Zilog announced](https://www.theregister.com/2024/04/22/z80_cpu_e
 
 ![](kicad/z80_breadboard_hld/z80_breadboard_hld.jpg)
 
-Whilst there were many homebrew / breadboard Z80 designs online, I wanted to design the circuit myself rather than copying existing designs. Of course I learned from other projects, but then again I also made some bad choices based on naive interpretation of examples that had been simplified for educational purposes.
-
 Designing from scratch, it was obvious to evolve the design on breadboard, being quick and easy to correct mistakes. I also found  Arduino boards invaluable during the process. I used Arduinos to provide "scaffolding" while the design took shape. Initially I used an Arduino to provide a clock to the Z80, and soon after to monitor the outputs of the chip and provide surrogate memory and I/O. Then when I added in other components to the design, I could progressively rely less and less on the Arduino until finally it could be unplugged altogether. Although I used several different boards, using a [Mega 2560](https://docs.arduino.cc/hardware/mega-2560/) is ideal, given the generous number of I/Os.
 
 As an aside, it's worth saying that being able to use an Arduino to manipulate the CPU is possible due to the static design of the chip - it doesn't have a minimum clock speed - you can single step the processor if you wish. 
