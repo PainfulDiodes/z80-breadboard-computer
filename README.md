@@ -48,6 +48,8 @@ Having considered various options, I used an [FTDI UM245R parallel-FIFO device](
 
 I confirmed through experimentation that whenever there is no more data to read, the UM245R will continue to repeatedly provide the last byte received. It is therefore necessary to check buffer state before reading data.
 
+![](/kicad/z80_UM245R/z80_UM245R.jpg)
+
 The UM245R provides two status outputs: /TXE (ready to transmit data) and  /RXF (data present in the receive buffer). The USB status signals are made available to the CPU as individual bits on a single byte accessed as an input port. A buffer with 3-state outputs (SN74LS244) is used to accomplish this: when the buffer is enabled, the status bits are output to the bus - /RXF as bit 0 and /TXE as bit 1 - the other 6 bits are tied low. 
 
 ## Glue Logic
