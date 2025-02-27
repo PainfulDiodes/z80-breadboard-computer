@@ -215,20 +215,18 @@ Note that I have skipped rows where both /RD and /WR are active as these are mut
 
 # Marvin the monitor
 
-I have started work on an accompanying [monitor program](https://github.com/PainfulDiodes/marvin)
+There is an accompanying [Marvin](https://github.com/PainfulDiodes/marvin) simple monitor program.
 
-At the time of writing this is not yet useful, it is sufficient though to test that all the components are working: reading instructions and data from ROM, reading and writing to RAM, interacting via the USB. It does this through printing a welcome message and then responding to "r" commands by reading from memory and printing the contents in hex. It uses RAM as a buffer for inputs, and also as a system stack.
+Marvin can be used via the USB and a terminal emulator on a host computer to:
+* Inspect memory in hex
+* Modify memory in hex
+* Load a program if available in [Intel HEX](https://en.wikipedia.org/wiki/Intel_HEX) format
+* Execute a program (jump to any address)
 
-There are a few noteworthy (in the sense that they tie in to the circuit design) lines of code:
+There are a couple of files that are noteworthy in that they tie Marvin to the circuit design:
 
-    SIO_CTRL .equ 0         ; serial control register address
-    SIO_DATA .equ 1         ; serial data register address
-    BUFFER .equ 0x8000      ; start of RAM
-    STACK .equ 0xffff       ; this should really be 0x0000 as the CPU will dec SP before PUSH
-
-As per the comments, the I/O port for status information (serial control register) is port 0 and the I/O port for data is 1 - which is what the I/O glue logic has established.
-
-The start of RAM is defined as 8000 hex, and the initial stack address is set to the top of the RAM (ffff hex) and these also correspond to what the memory glue logic has effectively established.
+* [beanzee.asm](https://github.com/PainfulDiodes/marvin/blob/main/beanzee.asm) defines memory and port addresses
+* [UM245R.asm](https://github.com/PainfulDiodes/marvin/blob/main/UM245R.asm) provides basic I/O routines specific for how the UM245 is wired into the circuit - such as which bits relate to the status of the device 
 
 https://github.com/PainfulDiodes/marvin  
 
