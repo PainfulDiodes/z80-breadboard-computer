@@ -1,5 +1,7 @@
-# Z80 Breadboard Computer
+# BreadZed80 - Z80 Breadboard Computer
 A simple Z80 design for breadboard using readily available components, made usable by being connected to a terminal emulator on a modern computer via USB, consistent (within reasonable bounds) with the technology of the 1980s, including having some resident software on ROM.
+
+See also: [BreadZed80](https://painfuldiodes.wordpress.com/category/breadzed80/) blog posts
 
 ![](images/annotated_breadboard.jpg)
 
